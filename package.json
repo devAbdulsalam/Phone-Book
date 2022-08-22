@@ -1,0 +1,19 @@
+{
+  "name": "tailwinds",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build-css": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.1.6"
+  },
+  "dependencies": {
+    "@tailwindcss/forms": "^0.5.2",
+    "tw-elements": "^1.0.0-alpha12"
+  }
+}

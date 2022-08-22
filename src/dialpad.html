@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>PhoneBook</title>
+		<link href="/dist/output.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/all.css" />
+	</head>
+	<body>
+		<div class="relative w-full h-screen overflow-auto">
+			<section class="w-full flex justify-center p-3 fixed bottom-0">
+				<div
+					id="opendialpad"
+					class="w-24 h-24 flex justify-center items-center rounded-full font-bold text-4xl text-white bg-blue-500 cursor-pointer"
+				>
+					<div
+						class="flex flex-col justify-center items-center pl-1 -space-y-5 text-center"
+					>
+						<div class="">
+							<span class="-ml-1">.</span>
+							<span class="-ml-1">.</span>
+							<span class="-ml-1">.</span>
+						</div>
+						<div>
+							<span class="-ml-1">.</span>
+							<span class="-ml-1">.</span>
+							<span class="-ml-1">.</span>
+						</div>
+						<span class="w-full pr-1">.</span>
+					</div>
+				</div>
+			</section>
+			<section
+				id="dialpad"
+				class="mx-auto w-full md:w-1/2 halfh shadow-md bg-gray-400 bottom-1"
+			>
+				<div class="bg-white h-full md:w-full mx-auto">
+					<div
+						id="displaydialinput"
+						class="border-b-2 border-gray-400 border-solid"
+					>
+						<input
+							id="displayNumbers"
+							type="text"
+							class="text-3xl text-center w-full"
+							placeholder=""
+						/>
+						<i
+							id="removelastinput"
+							class="fa fas fa-times absolute z-50 right-2 mt-3 pr-3 text-4xl cursor-pointer"
+						></i>
+					</div>
+					<div class="container py-2 px-5">
+						<div
+							id="buttons"
+							class="text-2xl text-center grid grid-cols-3 items-center justify-center space-1"
+						>
+							<div
+								class="button text-2xl w-20 m-auto p-2 rounded-full border-solid hover:border-x-2 hover:bg-slate-100 cursor-pointer"
+							>
+								<div>1</div>
+								<div class="text-lg text-gray-600">@@</div>
+							</div>
+							<div
+								class="button text-2xl w-20 m-auto p-2 rounded-full border-solid hover:border-x-2 hover:bg-slate-100 cursor-pointer"
+							>
+								<div>2</div>
+								<div class="text-lg text-gray-600">ABC</div>
+							</div>
+							<div
+								class="button text-2xl w-20 m-auto p-2 rounded-full border-solid hover:border-x-2 hover:bg-slate-100 cursor-pointer"
+							>
+								<div>3</div>
+								<div class="text-lg text-gray-600">DEF</div>
+							</div>
+							<div
+								class="button text-2xl w-20 m-auto p-2 rounded-full border-solid hover:border-x-2 hover:bg-slate-100 cursor-pointer"
+							>
+								<div>4</div>
+								<div class="text-lg text-gray-600">GHI</div>
+							</div>
+							<div
+								class="button text-2xl w-20 m-auto p-2 rounded-full border-solid hover:border-x-2 hover:bg-slate-100 cursor-pointer"
+							>
+								<div>5</div>
+								<div class="text-lg text-gray-600">JKL</div>
+							</div>
+							<div
+								class="button text-2xl w-20 m-auto p-2 rounded-full border-solid hover:border-x-2 hover:bg-slate-100 cursor-pointer"
+							>
+								<div>6</div>
+								<div class="text-lg text-gray-600">MNO</div>
+							</div>
+							<div
+								class="button text-2xl w-20 m-auto p-2 rounded-full border-solid hover:border-x-2 hover:bg-slate-100 cursor-pointer"
+							>
+								<div>7</div>
+								<div class="text-lg text-gray-600">PQRS</div>
+							</div>
+							<div
+								class="button text-2xl w-20 m-auto p-2 rounded-full border-solid hover:border-x-2 hover:bg-slate-100 cursor-pointer"
+							>
+								<div>8</div>
+								<div class="text-lg text-gray-600">TUV</div>
+							</div>
+							<div
+								class="button text-2xl w-20 m-auto p-2 rounded-full border-solid hover:border-x-2 hover:bg-slate-100 cursor-pointer"
+							>
+								<div>9</div>
+								<div class="text-lg text-gray-600">WXYZ</div>
+							</div>
+							<div
+								class="button text-2xl w-20 m-auto p-2 rounded-full flex justify-center items-center h-full border-solid hover:border-x-2 hover:bg-slate-100 cursor-pointer"
+							>
+								*
+							</div>
+							<div
+								class="button text-2xl w-20 m-auto p-2 rounded-full border-solid hover:border-x-2 hover:bg-slate-100 cursor-pointer"
+							>
+								<div>0</div>
+								<div class="text-lg text-gray-600">+</div>
+							</div>
+							<div
+								class="button text-2xl w-20 m-auto p-2 rounded-full flex justify-center items-center h-full border-solid hover:border-x-2 hover:bg-slate-100 cursor-pointer"
+							>
+								#
+							</div>
+							<div
+								class="button text-2xl w-20 m-auto p-2 rounded-full border-solid hover:border-x-2 hover:bg-slate-100 cursor-pointer invisible"
+							></div>
+							<div
+								id="callDisplaynumber"
+								class="button text-2xl w-20 m-auto p-5 rounded-full border-solid bg-green-800 hover:border-x-2 hover:border-green-300 cursor-pointer"
+							>
+								<i class="fa fa-phone text-white text-4xl text-center"></i>
+							</div>
+							<div
+								id="closeDialPad"
+								class="button text-2xl w-20 m-auto p-2 rounded-full border-solid h-full flex justify-center items-center hover:border-x-2 hover:bg-slate-100 cursor-pointer"
+							>
+								<i class="fa fa-arrow-down"></i>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+		<script src="/node_modules/tw-elements/dist/js/index.min.js"></script>
+		<script src="scrpit.js"></script>
+		<script src="contact.js"></script>
+	</body>
+</html>

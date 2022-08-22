@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.debug{
+     border: 2px solid red;
+}
+.debugg{
+     border: 2px solid green;
+}
+.outlineb{
+     outline: 2px solid  blue;
+}
+.ht{
+     max-height: 70vh;
+     overflow: scroll-y;
+}
+.scale{
+     transform: scaleX(1.2);
+};
+.scale:hover{
+     transition: transform ease-in-out 200;
+}
+.hheight{
+     height: 70vh;
+};
+
+@layer base {
+     [type="text"],
+     [type="email"],
+     [type="url"],
+     [type="password"],
+     [type="number"],
+     [type="date"],
+     [type="datetime-local"],
+     [type="month"],
+     [type="search"],
+     [type="tel"],
+     [type="time"],
+     [type="week"],
+     [multiple],
+     textarea,
+     select {
+          @layer w-full border-gray-300 rounded-lg shadow-sm focus:border-indigo-500;
+     }
+
+     [type="checkbox"],
+     [type="radio"] {
+          @layer border-gray-300 rounded text-indigo-600 focus: ring-indigo-500;
+     }
+}
+
+/* for login error messages */
+@layer components{
+     .hideme{
+     @apply hidden;
+     };
+. {
+     display: block;
+}
+.success{
+     display: block;
+     text-align: center;
+     background-color: green;
+}
+
+.danger {
+     display: block;
+     text-align: center;
+     background-color: rgb(252, 138, 138);
+}
+.medium {
+     display: block;
+     text-align: center;
+     background-color: yellow;
+}
+.neutral {
+     display: block;
+     text-align: center;
+     background-color: rgb(212, 206, 206);
+}
+.active_nav{
+     @apply border-white border-b-4 border-solid;
+}
+.halfh{
+     height: 60vh;
+     position: fixed;
+     left: 50%;
+     transform:translate(-50%);
+     z-index: 1000;
+}
+}
